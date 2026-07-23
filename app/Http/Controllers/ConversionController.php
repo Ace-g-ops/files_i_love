@@ -74,4 +74,15 @@ class ConversionController extends Controller
         return null;
     }
 
+    public function status(int $id){
+
+        $conversion = Conversion::findOrFail($id);
+
+        return response()->json([
+
+            'status' => $conversion->status,
+            'error_message' => $conversion->error_message,
+        ]);
+    }
+
 }
