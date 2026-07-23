@@ -17,10 +17,12 @@ class ConversionController extends Controller
             'target_format' => 'required|string'
         ]);
 
+        // Get the uploaded file and its original extension
         $uploadedFile = $request->file('file');
         $sourceFormat = strtolower($uploadedFile->getClientOriginalExtension());
         $targetFormat = $request->input('target_format');
 
+        // Determine the category of conversion based on source and target formats
         $category = $this->resolveCategory($sourceFormat, $targetFormat);
 
         if(!$category){
@@ -42,6 +44,7 @@ class ConversionController extends Controller
             'status' => 'pending'
         ]);
 
+        // Dispatch the appropriate job based on the category
         if($category === 'document'){
 
             ConvertDocumentJob::dispatch($conversion->id);
@@ -56,7 +59,7 @@ class ConversionController extends Controller
         ]);
 
     }
-
+    //determine the category of conversion based on source and target formats
     private function resolveCategory(string $source, string $target): ?string
     {
         foreach(['document', 'media'] as $category){
