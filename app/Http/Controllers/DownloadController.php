@@ -18,8 +18,9 @@ class DownloadController extends Controller
                 'error_message' => 'File not completed',
                 202,
             ]);
-        }
+        }else{
 
-        return response()->download($conversion->converted_path);
+            return response()->download($conversion->converted_path, $conversion->original_filename);
+        }
     }
 }
