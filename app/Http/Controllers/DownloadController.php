@@ -16,8 +16,7 @@ class DownloadController extends Controller
             return response()->json([
 
                 'error_message' => 'File not completed',
-                202,
-            ]);
+            ],200);
         }else{
 
             return response()->download($conversion->converted_path, $conversion->original_filename);

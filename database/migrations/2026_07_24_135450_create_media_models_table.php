@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('conversions', function (Blueprint $table) {
+        Schema::create('media_models', function (Blueprint $table) {
             $table->id();
             $table->string('original_filename');
             $table->string('stored_path');
-            $table->string('converted_path')->nullable();
+            $table->string('converted_path')->nullable;
             $table->string('source_format');
             $table->string('target_format');
-            $table->enum('status', ['pending', 'processing', 'completed', 'failed'])->default('pending');
-            $table->text('error_message');
+            $table->enum('status',['Pending', 'Processing', 'Completed', 'Failed']);
+            $table->test('error_message');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('conversions');
+        Schema::dropIfExists('media_models');
     }
 };

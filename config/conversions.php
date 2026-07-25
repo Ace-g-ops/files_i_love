@@ -6,7 +6,7 @@ return [
     'document' => [
 
         'engine' => \App\Services\DocumentConverter::class,
-        'fomats' => [
+        'formats' => [
             'pdf' => ['docx', 'txt', 'html'],
             'docx' => ['pdf', 'txt', 'html'],
             'txt' => ['pdf', 'docx', 'html'],
