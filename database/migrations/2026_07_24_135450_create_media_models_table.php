@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('original_filename');
             $table->string('stored_path');
-            $table->string('converted_path')->nullable;
+            $table->string('converted_path')->nullable();
             $table->string('source_format');
             $table->string('target_format');
             $table->enum('status',['Pending', 'Processing', 'Completed', 'Failed']);
-            $table->text('error_message');
+            $table->text('error_message')->nullable();
             $table->timestamps();
         });
     }

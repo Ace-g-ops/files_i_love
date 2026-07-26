@@ -46,3 +46,7 @@ Problem
       Illuminate\Support\Facades\Facade::__callStatic()
 
       Solution - change the data type and migrate again.
+
+      composer require doctrine/dbal //->change()
+
+      tail -f storage.logs/laravel.log

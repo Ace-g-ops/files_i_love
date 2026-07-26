@@ -70,7 +70,6 @@ class ConversionController extends Controller
 
             $formats = config("conversions.$category.formats");
 
-            // in_array checks if a value is present in an array.
             if(isset($formats[$source]) && in_array($target, $formats[$source])){
 
                 return $category;

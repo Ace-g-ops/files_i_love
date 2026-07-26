@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Logs;
+use App\Jobs\ConvertMediaJob;
+use App\Models\mediaModel;
 
 class MediaController extends Controller
 {   
@@ -20,18 +23,20 @@ class MediaController extends Controller
         $sourceFormat = strtolower($uploadedFile->getClientOriginalExtension());
         $targetFormat = $request->input('target_format');
 
-        $category = $this->resolvecategory($sourceFormat, $targetFormat);
+        $category = $this->resolveCategory( $sourceFormat, $targetFormat);
 
         if(!$category){
 
+
+            // Log::info("wrong Format");
             return response()->json([
-                'message' => "Invalid Format"
+                'error' => "Invalid Format"
             ],422);
 
         }
 
         $storedPath = $uploadedFile->store('uploads');
-         Log::info("File Stored");
+        //  Log::info("File Stored");
 
         $media = mediaModel::create([
             'original_filename' => $uploadedFile->getClientOriginalName(),
@@ -43,35 +48,33 @@ class MediaController extends Controller
 
         //dispatch the appropriate job based on the category
 
-        if(!$category === 'media'){
+        if($category === 'media'){
 
             ConvertMediaJob::dispatch($media->id);
         }
 
-        Log::info("Job Dispatched");
+        // Log::info("Job Dispatched");
 
         return response()->json([
             'message' => "File uploaded successfully",
             'media_id' => $media->id
         ],200);
     }
-
-    private function resolvecategory($sourceFormat, $targetFormat){
-
+    //determine the category of conversion based on source and target formats
+    private function resolveCategory(string $sourceFormat, string $targetFormat): ?string
+    {
         foreach(['media'] as $category){
 
             $formats = config("conversions.$category.formats");
 
-            if(in_array($sourceFormat, $formats) && in_array($targetFormat, $formats)){
+            if(isset($formats[ $sourceFormat]) && in_array($targetFormat, $formats[ $sourceFormat])){
 
                 return $category;
             }
+
         }
 
         return null;
-
-        Log::info("Category Resolved");
-        
     }
 
     public function status($id){
@@ -81,7 +84,7 @@ class MediaController extends Controller
         return response()->json([
 
             'status' => $media->status,
-            'error_messsage' => $media->error_message,
+           'error_message' => $media->error_message,
         ]);
     }
 }
