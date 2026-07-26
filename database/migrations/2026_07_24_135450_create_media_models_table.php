@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('source_format');
             $table->string('target_format');
             $table->enum('status',['Pending', 'Processing', 'Completed', 'Failed']);
-            $table->test('error_message');
+            $table->text('error_message');
             $table->timestamps();
         });
     }

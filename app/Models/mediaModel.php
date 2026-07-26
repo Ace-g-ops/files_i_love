@@ -11,9 +11,10 @@ class mediaModel extends Model
         'original_filename',
         'stored_path',
         'converted_path',
-        'error_message'.
+        'error_message',
         'source_format',
         'target_format',
-        
+        'status',
+        'error_message',    
     ];
 }

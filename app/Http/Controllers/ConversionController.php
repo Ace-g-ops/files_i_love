@@ -60,13 +60,13 @@ class ConversionController extends Controller
 
             'id' => $conversion->id,
             'message' => "succefully converted",
-        ]);
+        ], 200);
 
     }
     //determine the category of conversion based on source and target formats
     private function resolveCategory(string $source, string $target): ?string
     {
-        foreach(['document', 'media'] as $category){
+        foreach(['document'] as $category){
 
             $formats = config("conversions.$category.formats");
 
