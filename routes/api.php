@@ -11,5 +11,5 @@ Route::get('/user', function (Request $request) {
 
 Route::post('/convert', [App\Http\Controllers\ConversionController::class, 'store']);
 Route::post('/convert-media', [App\Http\Controllers\MediaController::class, 'store']);
-Route::get('/download/{id}', [App\Http\Controllers\DownloadController::class, 'show']);
+Route::get('/download/{type}/{id}', [App\Http\Controllers\DownloadController::class, 'show']);
 Route::get('/status/{id}', [App\Http\Controllers\ConversionController::class, 'status']); 

@@ -49,4 +49,4 @@ Problem
 
       composer require doctrine/dbal //->change()
 
-      tail -f storage.logs/laravel.log
+      tail -f storage/logs/laravel.log

@@ -51,9 +51,10 @@ class MediaController extends Controller
         if($category === 'media'){
 
             ConvertMediaJob::dispatch($media->id);
+            //  Log::info("Job Dispatched");
         }
 
-        // Log::info("Job Dispatched");
+       
 
         return response()->json([
             'message' => "File uploaded successfully",

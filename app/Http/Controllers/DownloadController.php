@@ -3,23 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\mediaModel;
 use App\Models\Conversion;
+use Illuminate\Support\Facades\Log;
 
 class DownloadController extends Controller
 {
-    public function show(int $id){
+  public function show(string $type ,int $id){
 
-        $conversion = Conversion::findOrFail($id);
+        dd($type, $id);
 
-        if($conversion->status !== 'completed'){
-
-            return response()->json([
-
-                'error_message' => 'File not completed',
-            ],200);
-        }else{
-
-            return response()->download($conversion->converted_path, $conversion->original_filename);
-        }
     }
 }
+
+
+        // $model = match($type){
+
+        //     'document' => Conversion::findOrFail($id),
+        //     'media' => mediaModel::findOrFail($id),
+        //     default => abort(404),
+        // };
+
+        // if($model->status !== 'completed'){
+
+        //    abort(404, 'File not available for download');      
+        // }
+
+        // return response()->download($model->converted_path, $model->original_filename);
