@@ -10,6 +10,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Bus\Dispatchable;
 use App\Services\PdfToDocxConverter;
+use Illuminate\Support\Facades\Storage;
 
 class ConvertDocumentJob implements ShouldQueue
 {
@@ -26,47 +27,43 @@ class ConvertDocumentJob implements ShouldQueue
     /**
      * Execute the job.
      */
-    public function handle(DocumentConverter $converter, PdfToDocxConverter $pdfToDocxConverter): void
-    {
-        //this looks up teh database to se if the id exists and if the id dosent exist, it throws an error.
-        $conversion = Conversion::findOrFail($this->conversionId);
+   public function handle(DocumentConverter $converter, PdfToDocxConverter $pdfToDocxConverter): void
+{
+    $conversion = Conversion::findOrFail($this->conversionId);
 
-        $conversion->update(['status' => 'processing']);
+    $realInputPath = Storage::disk('local')->path($conversion->stored_path);
 
-        try {
+    if (!file_exists($realInputPath)) {
+        $conversion->update([
+            'status' => 'failed',
+            'error_message' => "Input file does not exist on disk: " . $realInputPath
+        ]);
+        return;
+    }
 
-            //strips the folder location and reveals the exact file path.
-            $outputDir = dirname($conversion->stored_path);
+    $conversion->update(['status' => 'processing']);
 
-          if($conversion->source_format === 'pdf' && $conversion->target_format === 'docx'){
+    try {
+        $outputDir = dirname($realInputPath);
 
-            $filename = pathinfo($conversion->stored_path, PATHINFO_FILENAME);
+        if ($conversion->source_format === 'pdf' && $conversion->target_format === 'docx') {
+            $filename = pathinfo($realInputPath, PATHINFO_FILENAME);
             $outputPath = $outputDir . '/' . $filename . '.docx';
 
-            $convertedPath = $pdfToDocxConverter->convert(
-                $conversion->stored_path,
-                $outputPath
-            );
-          } else {
-
-            $convertedPath = $converter->convert(
-                $conversion->stored_path,
-                $outputDir,
-                $conversion->target_format
-            );
-          }
-
-          $conversion->update([
-                'status' => 'completed',
-                'converted_path' => $convertedPath,
-            ]);
-
-        }catch(\Throwable $e) {
-
-            $conversion->update([
-                'status' => 'failed',
-                'error_message' => $e->getMessage(),
-            ]);
+            $convertedPath = $pdfToDocxConverter->convert($realInputPath, $outputPath);
+        } else {
+            $convertedPath = $converter->convert($realInputPath, $outputDir, $conversion->target_format);
         }
+
+        $conversion->update([
+            'status' => 'completed',
+            'converted_path' => $convertedPath,
+        ]);
+    } catch (\Throwable $e) {
+        $conversion->update([
+            'status' => 'failed',
+            'error_message' => $e->getMessage(),
+        ]);
     }
+}
 }

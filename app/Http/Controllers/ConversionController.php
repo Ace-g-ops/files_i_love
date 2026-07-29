@@ -38,7 +38,7 @@ class ConversionController extends Controller
 
         $conversion = Conversion::create([
             'original_filename' => $uploadedFile->getClientOriginalName(),
-            'stored_path' => storage_path('app/' . $storedPath),
+            'stored_path' => $storedPath,
             'source_format' => $sourceFormat,
             'target_format' => $targetFormat,
             'status' => 'processing',
