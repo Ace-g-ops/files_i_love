@@ -9,6 +9,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Bus\Dispatchable;
+use App\Services\PdfToDocxConverter;
 
 class ConvertDocumentJob implements ShouldQueue
 {
@@ -37,18 +38,18 @@ class ConvertDocumentJob implements ShouldQueue
             //strips the folder location and reveals the exact file path.
             $outputDir = dirname($conversion->stored_path);
 
-          if($conversion->sourceFormat === 'pdf' && $conversion->targetFormat === 'docx'){
+          if($conversion->source_format === 'pdf' && $conversion->target_format === 'docx'){
 
             $filename = pathinfo($conversion->stored_path, PATHINFO_FILENAME);
             $outputPath = $outputDir . '/' . $filename . '.docx';
 
-            $converterPath = $pdfToDocxConverter->convert(
+            $convertedPath = $pdfToDocxConverter->convert(
                 $conversion->stored_path,
                 $outputPath
             );
           } else {
 
-            $documentConverter->convert(
+            $convertedPath = $converter->convert(
                 $conversion->stored_path,
                 $outputDir,
                 $conversion->target_format

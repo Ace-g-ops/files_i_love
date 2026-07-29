@@ -11,10 +11,7 @@ class ConversionController extends Controller
     
     public function store(Request $request)
     {
-        // dd($request->all());
-        //this request for the file and also validate its input.
-
-        $request->validate([
+         $request->validate([
             'file' => 'required|file|max:51200', //50MB max
             'target_format' => 'required|string'
         ]);
@@ -38,7 +35,6 @@ class ConversionController extends Controller
         }
 
         $storedPath = $uploadedFile->store('uploads');
-        Log::info("File Stored");
 
         $conversion = Conversion::create([
             'original_filename' => $uploadedFile->getClientOriginalName(),
@@ -55,12 +51,10 @@ class ConversionController extends Controller
             ConvertDocumentJob::dispatch($conversion->id);
         }
 
-        Log::info("Job Dispatched");
-
         return response()->json([
 
             'id' => $conversion->id,
-            'message' => "succefully converted",
+            'message' => "Successfully Converted",
         ], 200);
 
     }

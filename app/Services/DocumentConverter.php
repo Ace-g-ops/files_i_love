@@ -11,7 +11,7 @@ class documentConverter{
     {
         $process = new Process([
             'soffice',
-            '--infilter', 'writer_pdf_import',
+            '--infilter=writer_pdf_import',
             '--headless',
             '--convert-to', $targetFormat,
             '--outdir', $outputDir,
