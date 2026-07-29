@@ -1,4 +1,4 @@
-import sys #
+import sys 
 from pdf2docx import Converter
 
 input_path = sys.argv[1]

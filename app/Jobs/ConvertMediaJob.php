@@ -36,7 +36,7 @@ public function handle(MediaConverter $converter): void
     if (!file_exists($realInputPath)) {
         $conversion->update([
             'status' => 'failed',
-            'error_message' => "PHP says this path does not exist on disk: " . $realInputPath
+            'error_message' => "This path does not exist on disk: " . $realInputPath
         ]);
         return;
     }

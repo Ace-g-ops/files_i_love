@@ -28,8 +28,6 @@ class MediaController extends Controller
 
         if(!$category){
 
-
-            // Log::info("wrong Format");
             return response()->json([
                 'error' => "Invalid Format"
             ],422);
@@ -37,7 +35,6 @@ class MediaController extends Controller
         }
 
         $storage = $uploadedFile->store('uploads'); //this returns the flename.
-        //  Log::info("File Stored");
 
         $media = mediaModel::create([
             'original_filename' => $uploadedFile->getClientOriginalName(),
@@ -54,10 +51,8 @@ class MediaController extends Controller
         if($category === 'media'){
 
             ConvertMediaJob::dispatch($media->id);
-            //  Log::info("Job Dispatched");
-        }
 
-       
+        }
 
         return response()->json([
             'message' => "File uploaded successfully",

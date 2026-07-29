@@ -25,7 +25,7 @@ class ConvertDocumentJob implements ShouldQueue
     /**
      * Execute the job.
      */
-    public function handle(DocumentConverter $converter): void
+    public function handle(DocumentConverter $converter, PdfToDocxConverter $pdfToDocxConverter): void
     {
         //this looks up teh database to se if the id exists and if the id dosent exist, it throws an error.
         $conversion = Conversion::findOrFail($this->conversionId);
@@ -37,17 +37,27 @@ class ConvertDocumentJob implements ShouldQueue
             //strips the folder location and reveals the exact file path.
             $outputDir = dirname($conversion->stored_path);
 
-            //call the services for what it needs exactly.
-            $convertedPath = $converter->convert(
-                $conversion-> stored_path,
-                $outputDir,
-                $conversion-> target_format
+          if($conversion->sourceFormat === 'pdf' && $conversion->targetFormat === 'docx'){
+
+            $filename = pathinfo($conversion->stored_path, PATHINFO_FILENAME);
+            $outputPath = $outputDir . '/' . $filename . '.docx';
+
+            $converterPath = $pdfToDocxConverter->convert(
+                $conversion->stored_path,
+                $outputPath
             );
+          } else {
 
-            $conversion->update([
+            $documentConverter->convert(
+                $conversion->stored_path,
+                $outputDir,
+                $conversion->target_format
+            );
+          }
 
+          $conversion->update([
                 'status' => 'completed',
-                'convertedPath' => $convertedPath,
+                'converted_path' => $convertedPath,
             ]);
 
         }catch(\Throwable $e) {
