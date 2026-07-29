@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use APP\Http\Controllers\ConversionController;
 use APP\Htpp\Controllers\DownloadController;
+use APP\Htpp\Controllers\MediaController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -13,3 +14,4 @@ Route::post('/convert', [App\Http\Controllers\ConversionController::class, 'stor
 Route::post('/convert-media', [App\Http\Controllers\MediaController::class, 'store']);
 Route::get('/download/{type}/{id}', [App\Http\Controllers\DownloadController::class, 'show']);
 Route::get('/status/{id}', [App\Http\Controllers\ConversionController::class, 'status']); 
+Route::get('/status/media/{id}',  [App\Http\Controllers\MediaController::class, 'status']);
