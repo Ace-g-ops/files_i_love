@@ -13,12 +13,13 @@ class mediaConverter{
 
         $process = new Process([
             'ffmpeg',
-            '-i', '$inputPath',
+            '-i', $inputPath,
+            '-c:a', 'aac', //audio codec for audio files
             '-y', // overwrite if exists
             $outputPath,
         ]);
 
-        $process->setTimeout(300); //audio/video conversion do take time hence why 3,mins
+        $process->setTimeout(300); //audio/video conversion do take time hence why 3mins
         $process->run();
 
         if(!$process->isSuccessful()){

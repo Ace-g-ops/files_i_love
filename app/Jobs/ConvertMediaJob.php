@@ -2,13 +2,14 @@
 
 namespace App\Jobs;
 
-use App\Models\Conversion;
+use App\Models\mediaModel;
 use App\Services\MediaConverter;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Support\Facades\Storage;
 
 class ConvertMediaJob implements ShouldQueue
 {
@@ -25,37 +26,42 @@ class ConvertMediaJob implements ShouldQueue
     /**
      * Execute the job.
      */
-    public function handle(MediaConverter $converter): void
-    {
-        $conversion = Conversion::findOrFail($this->conversionId);
+    
+public function handle(MediaConverter $converter): void
+{
+    $conversion = mediaModel::findOrFail($this->conversionId);
 
-        $conversion->update(['status' => 'processing']);
+    $realInputPath = Storage::disk('local')->path($conversion->stored_path);
 
-        try{
-            //strips the folder of the file.
-            $outputDir = dirname($conversion->stored_path);
-
-            $filename = pathinfo($conversion->stored_path, PATHINFO_FILENAME);
-            $outputPath = $outputDir . '/' . $filename . '.' .  $conversion->target_format;
-
-            $convertedPath = $converter->convert(
-                $conversion->stored_path,
-                $outputPath
-            );
-
-            $conversion->update([
-
-                'status' => 'completed',
-                'convertedPath' => $convertedPath,
-            ]);
-        }catch(\Throwable $e){
-
-            $conversion-> update([
-
-                'status' => "failed",
-                'error_message' => $e->getmessage(),
-            ]);
-        }
-
+    if (!file_exists($realInputPath)) {
+        $conversion->update([
+            'status' => 'failed',
+            'error_message' => "PHP says this path does not exist on disk: " . $realInputPath
+        ]);
+        return;
     }
+
+    $conversion->update(['status' => 'processing']);
+
+    try {
+        // Generate an absolute output path in the same secure directory
+        $filename = pathinfo($realInputPath, PATHINFO_FILENAME);
+        $outputRelativePath = 'uploads/' . $filename . '.' . $conversion->target_format;
+        $realOutputPath = Storage::disk('local')->path($outputRelativePath);
+
+        // Run the converter with fully resolved absolute system paths
+        $convertedPath = $converter->convert($realInputPath, $realOutputPath);
+
+        $conversion->update([
+            'status' => 'completed',
+            'converted_path' => $outputRelativePath, // Keep saving relative reference to DB
+        ]);
+
+    } catch(\Throwable $e) {
+        $conversion->update([
+            'status' => "failed",
+            'error_message' => $e->getMessage(),
+        ]);
+    }
+}
 }

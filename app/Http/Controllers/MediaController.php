@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Logs;
 use App\Jobs\ConvertMediaJob;
 use App\Models\mediaModel;
+use Illuminate\Support\Facades\Storage;
 
 class MediaController extends Controller
 {   
@@ -35,15 +36,17 @@ class MediaController extends Controller
 
         }
 
-        $storedPath = $uploadedFile->store('uploads');
+        $storage = $uploadedFile->store('uploads'); //this returns the flename.
         //  Log::info("File Stored");
 
         $media = mediaModel::create([
             'original_filename' => $uploadedFile->getClientOriginalName(),
-            'stored_path' => storage_path('app/' . $storedPath),
+            'stored_path' => $storage,
+            // storage_path('app/' . $storedPath),
             'source_format' => $sourceFormat,
             'target_format' => $targetFormat,
-            'status' => 'pending'
+            'status' => 'processing', // Set initial status to 'pending' or 'processing' based on your logic
+            'converted_path' => null, // Initially, there is no converted path
         ]);
 
         //dispatch the appropriate job based on the category

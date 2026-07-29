@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('converted_path')->nullable();
             $table->string('source_format');
             $table->string('target_format');
-            $table->enum('status',['pending', 'Processing', 'Completed', 'Failed']);
+            $table->enum('status',['pending', 'processing', 'completed', 'failed']);
             $table->text('error_message')->nullable();
             $table->timestamps();
         });

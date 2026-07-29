@@ -18,7 +18,7 @@ class documentConverter{
             $inputPath
         ]);
 
-        $process->setTimeout(120); // Set a timeout of 120 seconds
+        $process->setTimeout(200); // Set a timeout of 120 seconds
         $process->run();
 
        if(! $process->isSuccessful()){

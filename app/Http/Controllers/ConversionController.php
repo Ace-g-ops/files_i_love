@@ -45,7 +45,8 @@ class ConversionController extends Controller
             'stored_path' => storage_path('app/' . $storedPath),
             'source_format' => $sourceFormat,
             'target_format' => $targetFormat,
-            'status' => 'pending'
+            'status' => 'processing',
+            'converted_path' => null,
         ]);
 
         // Dispatch the appropriate job based on the category
