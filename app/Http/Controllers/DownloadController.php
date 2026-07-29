@@ -17,7 +17,7 @@ class DownloadController extends Controller
             default => abort(404),
         };
 
-        if(!$model->status !== 'complete' || empty($model->converted_path)){
+        if($model->status !== 'completed' || empty($model->converted_path)){
 
             return response()->json([
                 'error' => 'file not ready or conversion failed',
@@ -28,7 +28,7 @@ class DownloadController extends Controller
 
         //if the job is still running, inform the API consumer.
 
-        if($model->status !== 'complete'){
+        if($model->status !== 'completed'){
 
             return response()->json([
 
@@ -39,6 +39,6 @@ class DownloadController extends Controller
         }
         //check if the file exist on the disk and return a response
 
-        return Storage::disk('local')->download($model->converted_path, $model->original_filename);
+        return response()->download($model->converted_path, $model->original_filename);
     }
 }

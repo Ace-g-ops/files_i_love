@@ -54,7 +54,7 @@ public function handle(MediaConverter $converter): void
 
         $conversion->update([
             'status' => 'completed',
-            'converted_path' => $outputRelativePath, // Keep saving relative reference to DB
+            'converted_path' => Storage::path($outputRelativePath),
         ]);
 
     } catch(\Throwable $e) {
