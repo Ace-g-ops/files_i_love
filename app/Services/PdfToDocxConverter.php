@@ -16,7 +16,7 @@ class PdfToDocxConverter
             $outputPath,
         ]);
 
-        $process->setTimeout(200); // Set a timeout of 200 seconds
+        $process->setTimeout(600); // Set a timeout of 600 seconds
         $process->run();
 
         if (!$process->isSuccessful()) {

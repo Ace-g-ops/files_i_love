@@ -1,0 +1,745 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#849
+    [34mall[39m: [
+      [34;4mApp\Models\Conversion[39;24m {#8089
+        [34mid[39m: [35m1[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/7mhmJl9HY9vtrG8Myh3dagrnvnxFESBMW25cFs5b.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mprocessing[39m[32m"[39m,
+        [34merror_message[39m: [36mnull[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 17:47:09[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 17:47:09[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8090
+        [34mid[39m: [35m2[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/WmRqqmhvLtP0snG6AMOSfnmaFDg0Lx9Kc0crFunI.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mprocessing[39m[32m"[39m,
+        [34merror_message[39m: [36mnull[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 17:47:29[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 17:47:29[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8091
+        [34mid[39m: [35m3[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/Ga6FH8r7qQNwrbIKZzxAERcFj7uJDuAPc1TDygdf.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mprocessing[39m[32m"[39m,
+        [34merror_message[39m: [36mnull[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 17:48:52[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 17:48:52[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8092
+        [34mid[39m: [35m4[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/mjf8l1NLzRhp1Gyngq9drJ7zd3iDg0GCicr8DfYC.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mprocessing[39m[32m"[39m,
+        [34merror_message[39m: [36mnull[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 17:54:57[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 17:54:57[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8093
+        [34mid[39m: [35m5[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/BgRDEIymjA1wvvT2kpJbpVC3Mq4f5PXtoIkECy3H.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mprocessing[39m[32m"[39m,
+        [34merror_message[39m: [36mnull[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 17:55:11[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 17:55:11[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8094
+        [34mid[39m: [35m6[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/QMmoG7asHZT4GPFPWLo7HJ4iPOHEw92BqaJByeyk.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32mdocumentConverter[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 17:56:10[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 17:56:27[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8095
+        [34mid[39m: [35m7[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/VmC52AOEEvLxouxeGVYiahmisUtvnxJVT2tSESVy.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32mdocumentConverter[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 17:56:34[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 17:56:36[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8096
+        [34mid[39m: [35m8[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/Xe3xWhmwhZo81zhf1y74kCrBJPedZrB6afGrFrW5.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32mdocumentConverter[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:00:07[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:00:07[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8097
+        [34mid[39m: [35m9[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/MNNq5yldTnkhFD6zww0vefzAFjbkr0amurdQ3XyV.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32mdocumentConverter[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:02:27[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:02:29[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8098
+        [34mid[39m: [35m10[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/owKGaaFZclIrrNCu9VTDWwvQWGlE7vUXY0qbYG0P.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32mdocumentConverter[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:04:22[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:04:23[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8099
+        [34mid[39m: [35m11[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/MpT5kRLPtZO3AdtbaTJdTLQq7iu3MYowqdFrhIS9.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: <<<[32mEOS[39m
+          [32mThe command "'soffice' '--infilter' 'writer_pdf_import' '--headless' '--convert-to' 'docx' '--outdir' '/home/dell_ace/files_i_love/storage/app/uploads' '/home/dell_ace/files_i_love/storage/app/uploads/MpT5kRLPtZO3AdtbaTJdTLQq7iu3MYowqdFrhIS9.pdf'" failed.[39m
+          
+          [32mExit Code: 1(General error)[39m
+          
+          [32mWorking directory: /home/dell_ace/files_i_love[39m
+          
+          [32mOutput:[39m
+          [32m================[39m
+          [32mLibreOffice 26.2.4.2 620(Build:2)[39m
+          
+          [32mError in option: --infilter[39m
+          
+          [32mUsage: soffice [argument...][39m
+          [32m       argument - switches, switch parameters and document URIs (filenames).   [39m
+          
+          [32mUsing without special arguments:                                               [39m
+          [32mOpens the start center, if it is used without any arguments.                   [39m
+          [32m   {file}              Tries to open the file (files) in the components        [39m
+          [32m                       suitable for them.                                      [39m
+          [32m   {file} {macro:///Library.Module.MacroName}                                  [39m
+          [32m                       Opens the file and runs specified macro from            [39m
+          [32m                       My Macros container.                                    [39m
+          [32m   {file} {macro://./Library.Module.MacroName}                                 [39m
+          [32m                       Opens the file and runs specified macro from            [39m
+          [32m                       the file.                                               [39m
+          
+          [32mGetting help and information:                                                  [39m
+          [32m   --help | -h | -?    Shows this help and quits.                              [39m
+          [32m   --helpwriter        Opens built-in or online Help on Writer.                [39m
+          [32m   --helpcalc          Opens built-in or online Help on Calc.                  [39m
+          [32m   --helpdraw          Opens built-in or online Help on Draw.                  [39m
+          [32m   --helpimpress       Opens built-in or online Help on Impress.               [39m
+          [32m   --helpbase          Opens built-in or online Help on Base.                  [39m
+          [32m   --helpbasic         Opens built-in or online Help on Basic scripting        [39m
+          [32m                       language.                                               [39m
+          [32m   --helpmath          Opens built-in or online Help on Math.                  [39m
+          [32m   --version           Shows the version and quits.                            [39m
+          [32m   --nstemporarydirectory                                                      [39m
+          [32m                       (MacOS X sandbox only) Returns path of the temporary    [39m
+          [32m                       directory for the current user and exits. Overrides     [39m
+          [32m                       all other arguments.                                    [39m
+          
+          [32mGeneral arguments:                                                             [39m
+          [32m   --quickstart[=no]   Activates[Deactivates] the Quickstarter service.        [39m
+          [32m   --nolockcheck       Disables check for remote instances using one           [39m
+          [32m                       installation.                                           [39m
+          [32m   --infilter={filter} Force an input filter type if possible. For example:    [39m
+          [32m                       --infilter="Calc Office Open XML"                     [39m
+          [32m                       --infilter="Text (encoded):UTF8,LF,,,"                [39m
+          [32m   --pidfile={file}    Store soffice.bin pid to {file}.                        [39m
+          [32m   --display {display} Sets the DISPLAY environment variable on UNIX-like      [39m
+          [32m                       platforms to the value {display} (only supported by a   [39m
+          [32m                       start script).                                          [39m
+          
+          [32mUser/programmatic interface control:                                           [39m
+          [32m   --nologo            Disables the splash screen at program start.            [39m
+          [32m   --minimized         Starts minimized. The splash screen is not displayed.   [39m
+          [32m   --nodefault         Starts without displaying anything except the splash    [39m
+          [32m                       screen (do not display initial window).                 [39m
+          [32m   --invisible         Starts in invisible mode. Neither the start-up logo nor [39m
+          [32m                       the initial program window will be visible. Application [39m
+          [32m                       can be controlled, and documents and dialogs can be     [39m
+          [32m                       controlled and opened via the API. Using the parameter, [39m
+          [32m                       the process can only be ended using the taskmanager     [39m
+          [32m                       (Windows) or the kill command (UNIX-like systems). It   [39m
+          [32m                       cannot be used in conjunction with --quickstart.        [39m
+          [32m   --headless          Starts in "headless mode" which allows using the      [39m
+          [32m                       application without GUI. This special mode can be used  [39m
+          [32m                       when the application is controlled by external clients  [39m
+          [32m                       via the API.                                            [39m
+          [32m   --norestore         Disables restart and file recovery after a system crash.[39m
+          [32m   --safe-mode         Starts in a safe mode, i.e. starts temporarily with a   [39m
+          [32m                       fresh user profile and helps to restore a broken        [39m
+          [32m                       configuration.                                          [39m
+          [32m   --accept={connect-string}  Specifies a UNO connect-string to create a UNO   [39m
+          [32m                       acceptor through which other programs can connect to    [39m
+          [32m                       access the API. Note that API access allows execution   [39m
+          [32m                       of arbitrary commands.                                  [39m
+          [32m                       The syntax of the {connect-string} is:                  [39m
+          [32m                         connection-type,params;protocol-name,params           [39m
+          [32m                       e.g.  pipe,name={some name};urp                         [39m
+          [32m                         or  socket,host=localhost,port=54321;urp              [39m
+          [32m   --unaccept={connect-string}  Closes an acceptor that was created with       [39m
+          [32m                       --accept. Use --unaccept=all to close all acceptors.    [39m
+          [32m   --language={lang}   Uses specified language, if language is not selected    [39m
+          [32m                       yet for UI. The lang is a tag of the language in IETF   [39m
+          [32m                       language tag.                                           [39m
+          
+          [32mDeveloper arguments:                                                           [39m
+          [32m   --terminate_after_init                                                      [39m
+          [32m                       Exit after initialization complete (no documents loaded)[39m
+          [32mNew document creation arguments:                                               [39m
+          [32mThe arguments create an empty document of specified kind. Only one of them may [39m
+          [32mbe used in one command line. If filenames are specified after an argument,     [39m
+          [32mthen it tries to open those files in the specified component.                  [39m
+          [32m   --writer            Creates an empty Writer document.                       [39m
+          [32m   --calc              Creates an empty Calc document.                         [39m
+          [32m   --draw              Creates an empty Draw document.                         [39m
+          [32m   --impress           Creates an empty Impress document.                      [39m
+          [32m   --base              Creates a new database.                                 [39m
+          [32m   --global            Creates an empty Writer master (global) document.       [39m
+          [32m   --math              Creates an empty Math document (formula).               [39m
+          [32m   --web               Creates an empty HTML document.                         [39m
+          
+          [32mFile open arguments:                                                           [39m
+          [32mThe arguments define how following filenames are treated. New treatment begins [39m
+          [32mafter the argument and ends at the next argument. The default treatment is to  [39m
+          [32mopen documents for editing, and create new documents from document templates.  [39m
+          [32m   -n                  Treats following files as templates for creation of new [39m
+          [32m                       documents.                                              [39m
+          [32m   -o                  Opens following files for editing, regardless whether   [39m
+          [32m                       they are templates or not.                              [39m
+          [32m   --pt {Printername}  Prints following files to the printer {Printername},    [39m
+          [32m                       after which those files are closed. The splash screen   [39m
+          [32m                       does not appear. If used multiple times, only last      [39m
+          [32m                       {Printername} is effective for all documents of all     [39m
+          [32m                       --pt runs. Also, --printer-name argument of             [39m
+          [32m                       --print-to-file switch interferes with {Printername}.   [39m
+          [32m   -p                  Prints following files to the default printer, after    [39m
+          [32m                       which those files are closed. The splash screen does    [39m
+          [32m                       not appear. If the file name contains spaces, then it   [39m
+          [32m                       must be enclosed in quotation marks.                    [39m
+          [32m   --view              Opens following files in viewer mode (read-only).       [39m
+          [32m   --show[=slide_number]  Opens and starts the slideshow of the following      [39m
+          [32m                       presentation documents immediately.                     [39m
+          [32m                       Files are closed after the showing.                     [39m
+          [32m                       If a slide_number is provided, they start at that slide.[39m
+          [32m   --convert-to OutputFileExtension[:OutputFilterName] [39m\\[32m                      [39m
+          [32m     [--outdir output_dir] [--convert-images-to]                               [39m
+          [32m                       Batch convert files (implies --headless). If --outdir   [39m
+          [32m                       isn't specified, then current working directory is used [39m
+          [32m                       as output_dir. If --convert-images-to is given, its     [39m
+          [32m                       parameter is taken as the target filter format for *all*[39m
+          [32m                       images written to the output format. If --convert-to is [39m
+          [32m                       used more than once, the last value of                  [39m
+          [32m                       OutputFileExtension[:OutputFilterName] is effective. If [39m
+          [32m                       --outdir is used more than once, only its last value is [39m
+          [32m                       effective. For example:                                 [39m
+          [32m                   --convert-to pdf *.odt                                      [39m
+          [32m                   --convert-to epub *.doc                                     [39m
+          [32m                   --convert-to pdf:writer_pdf_Export --outdir /home/user *.doc[39m
+          [32m                   --convert-to "html:XHTML Writer File:UTF8" [39m\\[32m             [39m
+          [32m                                --convert-images-to "jpg" *.doc              [39m
+          [32m                   --convert-to "txt:Text (encoded):UTF8" *.doc              [39m
+          [32m   --print-to-file [--printer-name printer_name] [--outdir output_dir]         [39m
+          [32m                       Batch print files to file. If --outdir is not specified,[39m
+          [32m                       then current working directory is used as output_dir.   [39m
+          [32m                       If --printer-name or --outdir used multiple times, only [39m
+          [32m                       last value of each is effective. Also, {Printername} of [39m
+          [32m                       --pt switch interferes with --printer-name.             [39m
+          [32m   --cat               Dump text content of the following files to console     [39m
+          [32m                       (implies --headless). Cannot be used with --convert-to. [39m
+          [32m   --script-cat        Dump text content of any scripts embedded in the files  [39m
+          [32m                       to console (implies --headless). Cannot be used with    [39m
+          [32m                       --convert-to.                                           [39m
+          [32m   -env:<VAR>[=<VALUE>] Set a bootstrap variable. For example: to set          [39m
+          [32m                       a non-default user profile path:                        [39m
+          [32m                       -env:UserInstallation=file:///tmp/test                  [39m
+          
+          [32mIgnored switches:                                                              [39m
+          [32m   -psn                Ignored (MacOS X only).                                 [39m
+          [32m   -Embedding          Ignored (COM+ related; Windows only).                   [39m
+          [32m   --nofirststartwizard Does nothing, accepted only for backward compatibility.[39m
+          [32m   --protector {arg1} {arg2}                                                   [39m
+          [32m                       Used only in unit tests and should have two arguments.  [39m
+          
+          
+          
+          [32mError Output:[39m
+          [32m================[39m
+          [32mEOS[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:05:55[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:06:10[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8100
+        [34mid[39m: [35m12[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/PCYKLAbbwcvz0UCYQ4pMtT8SgfgYSmPTArSg1fRX.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: <<<[32mEOS[39m
+          [32mThe command "'soffice' '--infilter' 'writer_pdf_import' '--headless' '--convert-to' 'docx' '--outdir' '/home/dell_ace/files_i_love/storage/app/uploads' '/home/dell_ace/files_i_love/storage/app/uploads/PCYKLAbbwcvz0UCYQ4pMtT8SgfgYSmPTArSg1fRX.pdf'" failed.[39m
+          
+          [32mExit Code: 1(General error)[39m
+          
+          [32mWorking directory: /home/dell_ace/files_i_love[39m
+          
+          [32mOutput:[39m
+          [32m================[39m
+          [32mLibreOffice 26.2.4.2 620(Build:2)[39m
+          
+          [32mError in option: --infilter[39m
+          
+          [32mUsage: soffice [argument...][39m
+          [32m       argument - switches, switch parameters and document URIs (filenames).   [39m
+          
+          [32mUsing without special arguments:                                               [39m
+          [32mOpens the start center, if it is used without any arguments.                   [39m
+          [32m   {file}              Tries to open the file (files) in the components        [39m
+          [32m                       suitable for them.                                      [39m
+          [32m   {file} {macro:///Library.Module.MacroName}                                  [39m
+          [32m                       Opens the file and runs specified macro from            [39m
+          [32m                       My Macros container.                                    [39m
+          [32m   {file} {macro://./Library.Module.MacroName}                                 [39m
+          [32m                       Opens the file and runs specified macro from            [39m
+          [32m                       the file.                                               [39m
+          
+          [32mGetting help and information:                                                  [39m
+          [32m   --help | -h | -?    Shows this help and quits.                              [39m
+          [32m   --helpwriter        Opens built-in or online Help on Writer.                [39m
+          [32m   --helpcalc          Opens built-in or online Help on Calc.                  [39m
+          [32m   --helpdraw          Opens built-in or online Help on Draw.                  [39m
+          [32m   --helpimpress       Opens built-in or online Help on Impress.               [39m
+          [32m   --helpbase          Opens built-in or online Help on Base.                  [39m
+          [32m   --helpbasic         Opens built-in or online Help on Basic scripting        [39m
+          [32m                       language.                                               [39m
+          [32m   --helpmath          Opens built-in or online Help on Math.                  [39m
+          [32m   --version           Shows the version and quits.                            [39m
+          [32m   --nstemporarydirectory                                                      [39m
+          [32m                       (MacOS X sandbox only) Returns path of the temporary    [39m
+          [32m                       directory for the current user and exits. Overrides     [39m
+          [32m                       all other arguments.                                    [39m
+          
+          [32mGeneral arguments:                                                             [39m
+          [32m   --quickstart[=no]   Activates[Deactivates] the Quickstarter service.        [39m
+          [32m   --nolockcheck       Disables check for remote instances using one           [39m
+          [32m                       installation.                                           [39m
+          [32m   --infilter={filter} Force an input filter type if possible. For example:    [39m
+          [32m                       --infilter="Calc Office Open XML"                     [39m
+          [32m                       --infilter="Text (encoded):UTF8,LF,,,"                [39m
+          [32m   --pidfile={file}    Store soffice.bin pid to {file}.                        [39m
+          [32m   --display {display} Sets the DISPLAY environment variable on UNIX-like      [39m
+          [32m                       platforms to the value {display} (only supported by a   [39m
+          [32m                       start script).                                          [39m
+          
+          [32mUser/programmatic interface control:                                           [39m
+          [32m   --nologo            Disables the splash screen at program start.            [39m
+          [32m   --minimized         Starts minimized. The splash screen is not displayed.   [39m
+          [32m   --nodefault         Starts without displaying anything except the splash    [39m
+          [32m                       screen (do not display initial window).                 [39m
+          [32m   --invisible         Starts in invisible mode. Neither the start-up logo nor [39m
+          [32m                       the initial program window will be visible. Application [39m
+          [32m                       can be controlled, and documents and dialogs can be     [39m
+          [32m                       controlled and opened via the API. Using the parameter, [39m
+          [32m                       the process can only be ended using the taskmanager     [39m
+          [32m                       (Windows) or the kill command (UNIX-like systems). It   [39m
+          [32m                       cannot be used in conjunction with --quickstart.        [39m
+          [32m   --headless          Starts in "headless mode" which allows using the      [39m
+          [32m                       application without GUI. This special mode can be used  [39m
+          [32m                       when the application is controlled by external clients  [39m
+          [32m                       via the API.                                            [39m
+          [32m   --norestore         Disables restart and file recovery after a system crash.[39m
+          [32m   --safe-mode         Starts in a safe mode, i.e. starts temporarily with a   [39m
+          [32m                       fresh user profile and helps to restore a broken        [39m
+          [32m                       configuration.                                          [39m
+          [32m   --accept={connect-string}  Specifies a UNO connect-string to create a UNO   [39m
+          [32m                       acceptor through which other programs can connect to    [39m
+          [32m                       access the API. Note that API access allows execution   [39m
+          [32m                       of arbitrary commands.                                  [39m
+          [32m                       The syntax of the {connect-string} is:                  [39m
+          [32m                         connection-type,params;protocol-name,params           [39m
+          [32m                       e.g.  pipe,name={some name};urp                         [39m
+          [32m                         or  socket,host=localhost,port=54321;urp              [39m
+          [32m   --unaccept={connect-string}  Closes an acceptor that was created with       [39m
+          [32m                       --accept. Use --unaccept=all to close all acceptors.    [39m
+          [32m   --language={lang}   Uses specified language, if language is not selected    [39m
+          [32m                       yet for UI. The lang is a tag of the language in IETF   [39m
+          [32m                       language tag.                                           [39m
+          
+          [32mDeveloper arguments:                                                           [39m
+          [32m   --terminate_after_init                                                      [39m
+          [32m                       Exit after initialization complete (no documents loaded)[39m
+          [32mNew document creation arguments:                                               [39m
+          [32mThe arguments create an empty document of specified kind. Only one of them may [39m
+          [32mbe used in one command line. If filenames are specified after an argument,     [39m
+          [32mthen it tries to open those files in the specified component.                  [39m
+          [32m   --writer            Creates an empty Writer document.                       [39m
+          [32m   --calc              Creates an empty Calc document.                         [39m
+          [32m   --draw              Creates an empty Draw document.                         [39m
+          [32m   --impress           Creates an empty Impress document.                      [39m
+          [32m   --base              Creates a new database.                                 [39m
+          [32m   --global            Creates an empty Writer master (global) document.       [39m
+          [32m   --math              Creates an empty Math document (formula).               [39m
+          [32m   --web               Creates an empty HTML document.                         [39m
+          
+          [32mFile open arguments:                                                           [39m
+          [32mThe arguments define how following filenames are treated. New treatment begins [39m
+          [32mafter the argument and ends at the next argument. The default treatment is to  [39m
+          [32mopen documents for editing, and create new documents from document templates.  [39m
+          [32m   -n                  Treats following files as templates for creation of new [39m
+          [32m                       documents.                                              [39m
+          [32m   -o                  Opens following files for editing, regardless whether   [39m
+          [32m                       they are templates or not.                              [39m
+          [32m   --pt {Printername}  Prints following files to the printer {Printername},    [39m
+          [32m                       after which those files are closed. The splash screen   [39m
+          [32m                       does not appear. If used multiple times, only last      [39m
+          [32m                       {Printername} is effective for all documents of all     [39m
+          [32m                       --pt runs. Also, --printer-name argument of             [39m
+          [32m                       --print-to-file switch interferes with {Printername}.   [39m
+          [32m   -p                  Prints following files to the default printer, after    [39m
+          [32m                       which those files are closed. The splash screen does    [39m
+          [32m                       not appear. If the file name contains spaces, then it   [39m
+          [32m                       must be enclosed in quotation marks.                    [39m
+          [32m   --view              Opens following files in viewer mode (read-only).       [39m
+          [32m   --show[=slide_number]  Opens and starts the slideshow of the following      [39m
+          [32m                       presentation documents immediately.                     [39m
+          [32m                       Files are closed after the showing.                     [39m
+          [32m                       If a slide_number is provided, they start at that slide.[39m
+          [32m   --convert-to OutputFileExtension[:OutputFilterName] [39m\\[32m                      [39m
+          [32m     [--outdir output_dir] [--convert-images-to]                               [39m
+          [32m                       Batch convert files (implies --headless). If --outdir   [39m
+          [32m                       isn't specified, then current working directory is used [39m
+          [32m                       as output_dir. If --convert-images-to is given, its     [39m
+          [32m                       parameter is taken as the target filter format for *all*[39m
+          [32m                       images written to the output format. If --convert-to is [39m
+          [32m                       used more than once, the last value of                  [39m
+          [32m                       OutputFileExtension[:OutputFilterName] is effective. If [39m
+          [32m                       --outdir is used more than once, only its last value is [39m
+          [32m                       effective. For example:                                 [39m
+          [32m                   --convert-to pdf *.odt                                      [39m
+          [32m                   --convert-to epub *.doc                                     [39m
+          [32m                   --convert-to pdf:writer_pdf_Export --outdir /home/user *.doc[39m
+          [32m                   --convert-to "html:XHTML Writer File:UTF8" [39m\\[32m             [39m
+          [32m                                --convert-images-to "jpg" *.doc              [39m
+          [32m                   --convert-to "txt:Text (encoded):UTF8" *.doc              [39m
+          [32m   --print-to-file [--printer-name printer_name] [--outdir output_dir]         [39m
+          [32m                       Batch print files to file. If --outdir is not specified,[39m
+          [32m                       then current working directory is used as output_dir.   [39m
+          [32m                       If --printer-name or --outdir used multiple times, only [39m
+          [32m                       last value of each is effective. Also, {Printername} of [39m
+          [32m                       --pt switch interferes with --printer-name.             [39m
+          [32m   --cat               Dump text content of the following files to console     [39m
+          [32m                       (implies --headless). Cannot be used with --convert-to. [39m
+          [32m   --script-cat        Dump text content of any scripts embedded in the files  [39m
+          [32m                       to console (implies --headless). Cannot be used with    [39m
+          [32m                       --convert-to.                                           [39m
+          [32m   -env:<VAR>[=<VALUE>] Set a bootstrap variable. For example: to set          [39m
+          [32m                       a non-default user profile path:                        [39m
+          [32m                       -env:UserInstallation=file:///tmp/test                  [39m
+          
+          [32mIgnored switches:                                                              [39m
+          [32m   -psn                Ignored (MacOS X only).                                 [39m
+          [32m   -Embedding          Ignored (COM+ related; Windows only).                   [39m
+          [32m   --nofirststartwizard Does nothing, accepted only for backward compatibility.[39m
+          [32m   --protector {arg1} {arg2}                                                   [39m
+          [32m                       Used only in unit tests and should have two arguments.  [39m
+          
+          
+          
+          [32mError Output:[39m
+          [32m================[39m
+          [32mEOS[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:09:39[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:09:42[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8101
+        [34mid[39m: [35m13[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/8Ua6wsF1EXkCMFdZYehYVGVX1tLy9uRDq3cFUswD.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: <<<[32mEOS[39m
+          [32mThe command "'soffice' '--infilter' 'writer_pdf_import' '--headless' '--convert-to' 'docx' '--outdir' '/home/dell_ace/files_i_love/storage/app/uploads' '/home/dell_ace/files_i_love/storage/app/uploads/8Ua6wsF1EXkCMFdZYehYVGVX1tLy9uRDq3cFUswD.pdf'" failed.[39m
+          
+          [32mExit Code: 1(General error)[39m
+          
+          [32mWorking directory: /home/dell_ace/files_i_love[39m
+          
+          [32mOutput:[39m
+          [32m================[39m
+          [32mLibreOffice 26.2.4.2 620(Build:2)[39m
+          
+          [32mError in option: --infilter[39m
+          
+          [32mUsage: soffice [argument...][39m
+          [32m       argument - switches, switch parameters and document URIs (filenames).   [39m
+          
+          [32mUsing without special arguments:                                               [39m
+          [32mOpens the start center, if it is used without any arguments.                   [39m
+          [32m   {file}              Tries to open the file (files) in the components        [39m
+          [32m                       suitable for them.                                      [39m
+          [32m   {file} {macro:///Library.Module.MacroName}                                  [39m
+          [32m                       Opens the file and runs specified macro from            [39m
+          [32m                       My Macros container.                                    [39m
+          [32m   {file} {macro://./Library.Module.MacroName}                                 [39m
+          [32m                       Opens the file and runs specified macro from            [39m
+          [32m                       the file.                                               [39m
+          
+          [32mGetting help and information:                                                  [39m
+          [32m   --help | -h | -?    Shows this help and quits.                              [39m
+          [32m   --helpwriter        Opens built-in or online Help on Writer.                [39m
+          [32m   --helpcalc          Opens built-in or online Help on Calc.                  [39m
+          [32m   --helpdraw          Opens built-in or online Help on Draw.                  [39m
+          [32m   --helpimpress       Opens built-in or online Help on Impress.               [39m
+          [32m   --helpbase          Opens built-in or online Help on Base.                  [39m
+          [32m   --helpbasic         Opens built-in or online Help on Basic scripting        [39m
+          [32m                       language.                                               [39m
+          [32m   --helpmath          Opens built-in or online Help on Math.                  [39m
+          [32m   --version           Shows the version and quits.                            [39m
+          [32m   --nstemporarydirectory                                                      [39m
+          [32m                       (MacOS X sandbox only) Returns path of the temporary    [39m
+          [32m                       directory for the current user and exits. Overrides     [39m
+          [32m                       all other arguments.                                    [39m
+          
+          [32mGeneral arguments:                                                             [39m
+          [32m   --quickstart[=no]   Activates[Deactivates] the Quickstarter service.        [39m
+          [32m   --nolockcheck       Disables check for remote instances using one           [39m
+          [32m                       installation.                                           [39m
+          [32m   --infilter={filter} Force an input filter type if possible. For example:    [39m
+          [32m                       --infilter="Calc Office Open XML"                     [39m
+          [32m                       --infilter="Text (encoded):UTF8,LF,,,"                [39m
+          [32m   --pidfile={file}    Store soffice.bin pid to {file}.                        [39m
+          [32m   --display {display} Sets the DISPLAY environment variable on UNIX-like      [39m
+          [32m                       platforms to the value {display} (only supported by a   [39m
+          [32m                       start script).                                          [39m
+          
+          [32mUser/programmatic interface control:                                           [39m
+          [32m   --nologo            Disables the splash screen at program start.            [39m
+          [32m   --minimized         Starts minimized. The splash screen is not displayed.   [39m
+          [32m   --nodefault         Starts without displaying anything except the splash    [39m
+          [32m                       screen (do not display initial window).                 [39m
+          [32m   --invisible         Starts in invisible mode. Neither the start-up logo nor [39m
+          [32m                       the initial program window will be visible. Application [39m
+          [32m                       can be controlled, and documents and dialogs can be     [39m
+          [32m                       controlled and opened via the API. Using the parameter, [39m
+          [32m                       the process can only be ended using the taskmanager     [39m
+          [32m                       (Windows) or the kill command (UNIX-like systems). It   [39m
+          [32m                       cannot be used in conjunction with --quickstart.        [39m
+          [32m   --headless          Starts in "headless mode" which allows using the      [39m
+          [32m                       application without GUI. This special mode can be used  [39m
+          [32m                       when the application is controlled by external clients  [39m
+          [32m                       via the API.                                            [39m
+          [32m   --norestore         Disables restart and file recovery after a system crash.[39m
+          [32m   --safe-mode         Starts in a safe mode, i.e. starts temporarily with a   [39m
+          [32m                       fresh user profile and helps to restore a broken        [39m
+          [32m                       configuration.                                          [39m
+          [32m   --accept={connect-string}  Specifies a UNO connect-string to create a UNO   [39m
+          [32m                       acceptor through which other programs can connect to    [39m
+          [32m                       access the API. Note that API access allows execution   [39m
+          [32m                       of arbitrary commands.                                  [39m
+          [32m                       The syntax of the {connect-string} is:                  [39m
+          [32m                         connection-type,params;protocol-name,params           [39m
+          [32m                       e.g.  pipe,name={some name};urp                         [39m
+          [32m                         or  socket,host=localhost,port=54321;urp              [39m
+          [32m   --unaccept={connect-string}  Closes an acceptor that was created with       [39m
+          [32m                       --accept. Use --unaccept=all to close all acceptors.    [39m
+          [32m   --language={lang}   Uses specified language, if language is not selected    [39m
+          [32m                       yet for UI. The lang is a tag of the language in IETF   [39m
+          [32m                       language tag.                                           [39m
+          
+          [32mDeveloper arguments:                                                           [39m
+          [32m   --terminate_after_init                                                      [39m
+          [32m                       Exit after initialization complete (no documents loaded)[39m
+          [32mNew document creation arguments:                                               [39m
+          [32mThe arguments create an empty document of specified kind. Only one of them may [39m
+          [32mbe used in one command line. If filenames are specified after an argument,     [39m
+          [32mthen it tries to open those files in the specified component.                  [39m
+          [32m   --writer            Creates an empty Writer document.                       [39m
+          [32m   --calc              Creates an empty Calc document.                         [39m
+          [32m   --draw              Creates an empty Draw document.                         [39m
+          [32m   --impress           Creates an empty Impress document.                      [39m
+          [32m   --base              Creates a new database.                                 [39m
+          [32m   --global            Creates an empty Writer master (global) document.       [39m
+          [32m   --math              Creates an empty Math document (formula).               [39m
+          [32m   --web               Creates an empty HTML document.                         [39m
+          
+          [32mFile open arguments:                                                           [39m
+          [32mThe arguments define how following filenames are treated. New treatment begins [39m
+          [32mafter the argument and ends at the next argument. The default treatment is to  [39m
+          [32mopen documents for editing, and create new documents from document templates.  [39m
+          [32m   -n                  Treats following files as templates for creation of new [39m
+          [32m                       documents.                                              [39m
+          [32m   -o                  Opens following files for editing, regardless whether   [39m
+          [32m                       they are templates or not.                              [39m
+          [32m   --pt {Printername}  Prints following files to the printer {Printername},    [39m
+          [32m                       after which those files are closed. The splash screen   [39m
+          [32m                       does not appear. If used multiple times, only last      [39m
+          [32m                       {Printername} is effective for all documents of all     [39m
+          [32m                       --pt runs. Also, --printer-name argument of             [39m
+          [32m                       --print-to-file switch interferes with {Printername}.   [39m
+          [32m   -p                  Prints following files to the default printer, after    [39m
+          [32m                       which those files are closed. The splash screen does    [39m
+          [32m                       not appear. If the file name contains spaces, then it   [39m
+          [32m                       must be enclosed in quotation marks.                    [39m
+          [32m   --view              Opens following files in viewer mode (read-only).       [39m
+          [32m   --show[=slide_number]  Opens and starts the slideshow of the following      [39m
+          [32m                       presentation documents immediately.                     [39m
+          [32m                       Files are closed after the showing.                     [39m
+          [32m                       If a slide_number is provided, they start at that slide.[39m
+          [32m   --convert-to OutputFileExtension[:OutputFilterName] [39m\\[32m                      [39m
+          [32m     [--outdir output_dir] [--convert-images-to]                               [39m
+          [32m                       Batch convert files (implies --headless). If --outdir   [39m
+          [32m                       isn't specified, then current working directory is used [39m
+          [32m                       as output_dir. If --convert-images-to is given, its     [39m
+          [32m                       parameter is taken as the target filter format for *all*[39m
+          [32m                       images written to the output format. If --convert-to is [39m
+          [32m                       used more than once, the last value of                  [39m
+          [32m                       OutputFileExtension[:OutputFilterName] is effective. If [39m
+          [32m                       --outdir is used more than once, only its last value is [39m
+          [32m                       effective. For example:                                 [39m
+          [32m                   --convert-to pdf *.odt                                      [39m
+          [32m                   --convert-to epub *.doc                                     [39m
+          [32m                   --convert-to pdf:writer_pdf_Export --outdir /home/user *.doc[39m
+          [32m                   --convert-to "html:XHTML Writer File:UTF8" [39m\\[32m             [39m
+          [32m                                --convert-images-to "jpg" *.doc              [39m
+          [32m                   --convert-to "txt:Text (encoded):UTF8" *.doc              [39m
+          [32m   --print-to-file [--printer-name printer_name] [--outdir output_dir]         [39m
+          [32m                       Batch print files to file. If --outdir is not specified,[39m
+          [32m                       then current working directory is used as output_dir.   [39m
+          [32m                       If --printer-name or --outdir used multiple times, only [39m
+          [32m                       last value of each is effective. Also, {Printername} of [39m
+          [32m                       --pt switch interferes with --printer-name.             [39m
+          [32m   --cat               Dump text content of the following files to console     [39m
+          [32m                       (implies --headless). Cannot be used with --convert-to. [39m
+          [32m   --script-cat        Dump text content of any scripts embedded in the files  [39m
+          [32m                       to console (implies --headless). Cannot be used with    [39m
+          [32m                       --convert-to.                                           [39m
+          [32m   -env:<VAR>[=<VALUE>] Set a bootstrap variable. For example: to set          [39m
+          [32m                       a non-default user profile path:                        [39m
+          [32m                       -env:UserInstallation=file:///tmp/test                  [39m
+          
+          [32mIgnored switches:                                                              [39m
+          [32m   -psn                Ignored (MacOS X only).                                 [39m
+          [32m   -Embedding          Ignored (COM+ related; Windows only).                   [39m
+          [32m   --nofirststartwizard Does nothing, accepted only for backward compatibility.[39m
+          [32m   --protector {arg1} {arg2}                                                   [39m
+          [32m                       Used only in unit tests and should have two arguments.  [39m
+          
+          
+          
+          [32mError Output:[39m
+          [32m================[39m
+          [32mEOS[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:10:14[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:10:17[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8102
+        [34mid[39m: [35m14[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/mN5UXT9zc1kHTBU4TIfBJIiE1fGLdBDhhdhfMLaH.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32mouputPath[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:33:35[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:34:04[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8103
+        [34mid[39m: [35m15[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/xBMASL9SJfwG2YIHNx14kU1k70bFTBTYW48lvtuB.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32mouputPath[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:42:54[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:42:58[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8104
+        [34mid[39m: [35m16[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/ovvz4Kb5dsc44e3WURCEs34CJKfawe5bOFEymGBe.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32mouputPath[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:43:34[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:43:36[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8105
+        [34mid[39m: [35m17[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/oYN0Gc25tdrRZ5kEwNlixDjliwuiEfRsAFSP1xOy.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32moutputPath[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:49:11[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:49:14[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8106
+        [34mid[39m: [35m18[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/bk7O6exUFl5yuWlfMxQONKJEU8RmPqGkrFzvsiju.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32moutputPath[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:55:26[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:55:47[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Conversion[39;24m {#8107
+        [34mid[39m: [35m19[39m,
+        [34moriginal_filename[39m: [32m"[39m[32mENT211.pdf[39m[32m"[39m,
+        [34mstored_path[39m: [32m"[39m[32m/home/dell_ace/files_i_love/storage/app/uploads/cadPV9RF03jLTQhlaWCozDQkJ2AJkiJMrSCijDol.pdf[39m[32m"[39m,
+        [34mconverted_path[39m: [36mnull[39m,
+        [34msource_format[39m: [32m"[39m[32mpdf[39m[32m"[39m,
+        [34mtarget_format[39m: [32m"[39m[32mdocx[39m[32m"[39m,
+        [34mstatus[39m: [32m"[39m[32mfailed[39m[32m"[39m,
+        [34merror_message[39m: [32m"[39m[32mUndefined variable [39m\$[32moutputPath[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-29 18:55:56[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-29 18:55:58[39m[32m"[39m,
+      },
+    ],
+  }

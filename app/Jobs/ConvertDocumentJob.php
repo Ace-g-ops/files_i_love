@@ -16,6 +16,9 @@ class ConvertDocumentJob implements ShouldQueue
 {
    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+   public $tiemout = 600;
+   public $tries = 2;
+
     /**
      * Create a new job instance.
      */

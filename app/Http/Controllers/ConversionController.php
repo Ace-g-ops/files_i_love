@@ -6,6 +6,7 @@ use App\Models\Conversion;
 use App\Jobs\ConvertDocumentJob;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Logs;
+use Illuminate\Support\Facades\Storage;
 class ConversionController extends Controller
 {   
     
@@ -34,11 +35,11 @@ class ConversionController extends Controller
             ],422);
         }
 
-        $storedPath = $uploadedFile->store('uploads');
+        $storage = $uploadedFile->store('uploads');
 
         $conversion = Conversion::create([
             'original_filename' => $uploadedFile->getClientOriginalName(),
-            'stored_path' => $storedPath,
+            'stored_path' => $storage,
             'source_format' => $sourceFormat,
             'target_format' => $targetFormat,
             'status' => 'processing',
