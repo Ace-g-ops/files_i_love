@@ -29,9 +29,9 @@ Route::middleware('throttle:60,1')->group(function(){
 Route::get('/download/{type}/{id}', [App\Http\Controllers\DownloadController::class, 'show']);
 
 //ALPINE-FORMAT-CONFIG ROUTE
-Route::get('/format', function(){
+Route::get('/formats', function(){
 
-    return response()->json(config('Conversions'));
+    return response()->json(config('conversions'));
 });
 
 
