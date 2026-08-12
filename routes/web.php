@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/converter', function(){
+Route::get('/', function(){
 
     return view('converter');
 });
