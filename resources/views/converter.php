@@ -20,6 +20,7 @@
             </template>
         </select>    
             <button @click="submitConversion()" x-show="targetFormat">Convert</button>
+            <button x-show="status === 'completed'" @click="downloadFile()">Download</button>
          <p x-text="status"></p>
     </div>
 
@@ -121,19 +122,24 @@
 
                         const data = await response.json();
 
-                        if(data.status === 'complete'){
+                        if(data.status === 'completed'){
                             clearInterval(this.pollInterval);
-                            this.status = 'Completed';
+                            this.status = 'completed';
                         }else{
 
                             if(data.status == 'failed'){
-                                clearInterval(pollInterval);
+                                clearInterval(this.pollInterval);
                                 this.status = 'Failed';
                                 this.errorMessage = data.error_message ?? 'Conversion Failed';
                             }
                         }
                     }, 2000);
                 },
+
+                downloadFile() {
+
+                    windows.location.href = `/api/download/${this.conversionType}/${this.conversionId}`
+                }
                
             }
         }
