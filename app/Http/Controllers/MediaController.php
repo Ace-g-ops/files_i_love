@@ -14,7 +14,7 @@ class MediaController extends Controller
 
         $request->validate([
              
-            'file' => 'required|file|mime:mp3,mp4,aac,wav|max:51200', //50MB max
+            'file' => 'required|file|mimes:mp3,mp4,aac,wav|max:51200', //50MB max
             'target_format' => 'required|string'
         ]);
 

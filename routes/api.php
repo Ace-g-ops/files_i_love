@@ -21,8 +21,8 @@ Route::middleware('throttle:5,1')->group(function(){
 //STATUS ROUTES
 Route::middleware('throttle:60,1')->group(function(){
 
-    Route::get('/status/{id}', [App\Http\Controllers\ConversionController::class, 'status']); 
-    Route::get('/status/media/{id}',  [App\Http\Controllers\MediaController::class, 'status']);
+    Route::get('/status/document/{id}', [App\Http\Controllers\ConversionController::class, 'status']); //doc-conversion status
+    Route::get('/status/media/{id}',  [App\Http\Controllers\MediaController::class, 'status']); //media-conversion status
 });
 
 //DOWNLOAD ROUTES

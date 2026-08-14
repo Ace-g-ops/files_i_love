@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>File Converter</title>
+    <title>FilesILove</title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
@@ -27,11 +27,13 @@
         function converterApp(){
             return{
                 status: 'idle',
-                selectedfile: null,
+                selectedFile: null,
                 sourceFormat: null,
                 targetFormat: '',
                 availableFormats: [],
                 conversionType: null,
+                pollInterval: null,
+                errorMesage: '',
 
                async handleFileSelect(event){
 
@@ -75,7 +77,7 @@
                     this.status = 'Uploading';
 
                     const formData = new FormData();
-                    formData.append('file', this.selectedfile);
+                    formData.append('file', this.selectedFile);
                     formData.append('target_format', this.targetFormat);
 
                     const endpoint = this.conversionType === 'document'
@@ -85,6 +87,9 @@
                     const response = await fetch(endpoint,{
 
                         method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                        },
                         body: formData,
                     });
 
@@ -97,11 +102,38 @@
                         return;
                     }
 
-                    this.conversionId = data.conversion_id ?? this.media_id;
+                    this.conversionId = data.id ?? data.media_id;
                     this.status = 'Processing';
+                    this.startPolling();
+                
+                },
 
-                    this.conversionId = null;
-                }
+                async startPolling() {
+
+                    this.pollInterval = setInterval(async () => {
+
+                        const response = await fetch(`/api/status/${this.conversionType}/${this.conversionId}`, {
+
+                            headers: {
+                                'Accept': 'application/json',
+                            },
+                        });
+
+                        const data = await response.json();
+
+                        if(data.status === 'complete'){
+                            clearInterval(this.pollInterval);
+                            this.status = 'Completed';
+                        }else{
+
+                            if(data.status == 'failed'){
+                                clearInterval(pollInterval);
+                                this.status = 'Failed';
+                                this.errorMessage = data.error_message ?? 'Conversion Failed';
+                            }
+                        }
+                    }, 2000);
+                },
                
             }
         }
