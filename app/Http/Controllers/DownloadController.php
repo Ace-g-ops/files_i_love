@@ -38,7 +38,8 @@ class DownloadController extends Controller
             ],202);
         }
         //check if the file exist on the disk and return a response
+        $downloadName = pathinfo($model->original_filename, PATHINFO_FILENAME) . '.' . $model->target_format;
 
-        return response()->download($model->converted_path, $model->original_filename);
+        return response()->download($model->converted_path, $downloadName);
     }
 }

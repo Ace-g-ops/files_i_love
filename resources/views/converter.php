@@ -1,6 +1,3 @@
-<!-- handles both media and doc files conversion -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +18,7 @@
         </select>    
             <button @click="submitConversion()" x-show="targetFormat">Convert</button>
             <button x-show="status === 'completed'" @click="downloadFile()">Download</button>
+            <p x-show="status === 'failed'" x-text="errorMessage"></p>
          <p x-text="status"></p>
     </div>
 
@@ -34,7 +32,7 @@
                 availableFormats: [],
                 conversionType: null,
                 pollInterval: null,
-                errorMesage: '',
+                errorMessage: '',
 
                async handleFileSelect(event){
 
@@ -138,8 +136,8 @@
 
                 downloadFile() {
 
-                    windows.location.href = `/api/download/${this.conversionType}/${this.conversionId}`
-                }
+                    window.location.href = `/api/download/${this.conversionType}/${this.conversionId}`
+                },
                
             }
         }

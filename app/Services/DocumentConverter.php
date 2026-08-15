@@ -7,16 +7,22 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 
 class documentConverter{
 
-    public function convert(string $inputPath, string $outputDir, string $targetFormat): string
+    public function convert(string $inputPath, string $outputDir, string $targetFormat, string $sourceFormattail ): string
     {
-        $process = new Process([
-            'soffice',
-            '--infilter=writer_pdf_import',
+        $args = ['soffice'];
+
+        if ($sourceFormat === 'pdf') {
+            $args[] = '--infilter=writer_pdf_import';
+        }
+
+        $args = array_merge($args, [
             '--headless',
             '--convert-to', $targetFormat,
             '--outdir', $outputDir,
-            $inputPath
+            $inputPath,
         ]);
+
+        $process = new Process($args);
 
         $process->setTimeout(600); // Set a timeout of 600 seconds
         $process->run();

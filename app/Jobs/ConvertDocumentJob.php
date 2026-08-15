@@ -16,7 +16,7 @@ class ConvertDocumentJob implements ShouldQueue
 {
    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-   public $tiemout = 600;
+   public $timeout = 600;
    public $tries = 2;
 
     /**
@@ -55,7 +55,7 @@ class ConvertDocumentJob implements ShouldQueue
 
             $convertedPath = $pdfToDocxConverter->convert($realInputPath, $outputPath);
         } else {
-            $convertedPath = $converter->convert($realInputPath, $outputDir, $conversion->target_format);
+            $convertedPath = $converter->convert($realInputPath, $outputDir, $conversion->target_format, $conversion->source_format);
         }
 
         $conversion->update([
