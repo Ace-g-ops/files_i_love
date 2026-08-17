@@ -13,7 +13,7 @@ class ConversionController extends Controller
     public function store(Request $request)
     {
          $request->validate([
-            'file' => 'required|file|mimes:pdf,docx,txt,html|max:51200', //50MB max
+            'file' => 'required|file|mimes:pdf,docx,txt,html|max:409600', 
             'target_format' => 'required|string'
         ]);
 

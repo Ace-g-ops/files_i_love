@@ -7,13 +7,10 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 
 class documentConverter{
 
-    public function convert(string $inputPath, string $outputDir, string $targetFormat, string $sourceFormattail ): string
+    public function convert(string $inputPath, string $outputDir, string $targetFormat, string $sourceFormat): string
     {
-        $args = ['soffice'];
 
-        if ($sourceFormat === 'pdf') {
-            $args[] = '--infilter=writer_pdf_import';
-        }
+        $args = ['soffice'];
 
         $args = array_merge($args, [
             '--headless',
