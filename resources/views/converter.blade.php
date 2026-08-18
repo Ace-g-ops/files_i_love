@@ -39,15 +39,66 @@
 
     <hr class="mt-0 mb-8 border-t border-slate-200/60 max-w-full mx-auto px-6" />
 
+    
+    <div class="text-center mb-10">
+        <h2 class="text-7xl font-bold text-black italic">Convert your files.</h2>
+        <h3 class="text-5xl font-bold text-gray-400 pt-9 italic">No ads. No fuss.</h3>
+    </div>
+    <br><br><br>
+    <div x-show=!selectedFile @click="$refs.fileInput.click()" class="max-w-4xl mx-auto bg-white border-2 border-solid border-black-300 rounded-2xl shadow-sm p-30 text-center cursor-pointer hover:border-dashed transition">
+        
+        <div class="mx-auto w-26 h-26 bg-red-100 rounded-full flex items-center justify-center mb- animate-bounce place-items-center">
+            <span class="text-red-500 text-2xl w-10 h-10 place-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75v6.75m0 0-3-3m3 3 3-3m-8.25 6a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
+                </svg>
+            </span>
+        </div>
 
-    <input type="file" @change="handleFileSelect($event)">
-            <select x-show="availableFormats.length > 0" x-model="targetFormat">
-                <option value=""> Select target format</option>
-                <template x-for="format in availableFormats" :key="format">
-                    <option :value="format" x-text="format"></option> 
-                </template>
-            </select>    
-                <button @click="submitConversion()" x-show="targetFormat">Convert</button>
+        <p class="font-bold text-gray-900 text-2xl pt-8 px-15">Insert file</p>
+        <input type="file" @change="handleFileSelect($event)" x-ref="fileInput" class="hidden">
+    </div>
+
+    <div x-show="selectedFile" class="max-w-lg mx-auto mt-4">
+    
+        <div class="bg-white border border-gray-200 rounded-xl shadow-sm p-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                    <span class="text-red-500">📄</span>
+                </div>
+                <div>
+                    <p class="font-semibold text-gray-900 text-sm" x-text="selectedFile?.name"></p>
+                    <p class="text-xs text-gray-400" x-text="(selectedFile?.size / 1024).toFixed(1) + ' KB'"></p>
+                </div>
+            </div>
+            <button @click="selectedFile = null" class="text-gray-400 hover:text-gray-600">✕</button>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <div>
+                <label class="text-sm text-gray-500">Detected type</label>
+                <div class="mt-1 bg-gray-100 rounded-lg px-4 py-2 text-gray-800" x-text="conversionType"></div>
+            </div>
+            <div>
+                <label class="text-sm text-gray-500">Convert to</label>
+                <select x-model="targetFormat" class="mt-1 w-full bg-gray-100 rounded-lg px-4 py-2 text-gray-800">
+                    <option value="">Select</option>
+                    <template x-for="format in availableFormats" :key="format">
+                        <option :value="format" x-text="'.' + format"></option>
+                    </template>
+                </select>
+            </div>
+        </div>
+
+        <button 
+            @click="submitConversion()" 
+            x-show="targetFormat"
+            class="w-full mt-6 bg-red-600 text-white font-semibold py-3 rounded-full hover:bg-red-700 transition"
+        >
+            Convert
+        </button>
+
+    </div>
                 <button x-show="status === 'completed'" @click="downloadFile()">Download</button>
                 <p x-show="status === 'failed'" x-text="errorMessage"></p>
             <p x-text="status"></p>
