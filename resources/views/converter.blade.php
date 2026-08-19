@@ -31,7 +31,7 @@
         </span>
     </h1>
 
-    <span class="flex items-center gap-1.5 text-sm sm:text-base text-gray-500 font-bold">
+    <span class="flex items-center gap-1.5 text-sm sm:text-base text-gray-500 font-bold mt-10  sm:mt-0">
         Made with love 
         <svg xmlns="http://w3.org" viewBox="0 0 24 24" class="w-4 h-4 fill-red-600 stroke-red-600"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
     </span>
@@ -39,21 +39,21 @@
     <hr class="mt-0 mb-8 border-t border-slate-200/60 max-w-full mx-auto px-6" />
     <br> <br> <br> <br>
 
-    <div class="text-center text-red-800 font-bold text-xl mb-2 bg-rose-100 border border-red-200 rounded-4xl py-2 px-4 max-w-2xs mx-auto mb-15 sm:mb-15">
+    <div class="text-center text-red-800 font-bold text-xl mb-6 bg-rose-100 border border-red-200 rounded-4xl py-2 px-4 max-w-2xs mx-auto mb-15 sm:mb-15">
        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline-block mr-0.5 mb-1">
              <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
         </svg> Runs in your browser
     </div>
 
-    <div class="text-center mb-10 px-4">
-        <h2 class="text-3xl sm:text-5xl md:text-7xl font-bold text-black italic">Convert your files.</h2>
-        <h3 class="text-xl sm:text-3xl md:text-5xl font-bold text-gray-400 pt-4 sm:pt-6 md:pt-9 italic">No ads. No watermarks troubles.</h3>
+    <div class="text-center mb-6 px-4">
+        <h2 class="text-2xl sm:text-5xl md:text-7xl font-bold text-black italic">Convert your files.</h2>
+        <h3 class="text-lg sm:text-3xl md:text-5xl font-bold text-gray-400 pt-1 sm:pt-6 md:pt-9 italic">No ads. No watermarks troubles.</h3>
     </div>
 
-    <div class="mt-8 sm:mt-16"></div>
+    <div class="mt-12 sm:mt-16"></div>
     
-    <div x-show="!selectedFile" @click="$refs.fileInput.click()" class="max-w-2xl mx-auto bg-white border-2 border-solid border-black-300 rounded-2xl shadow-sm p-8 sm:p-16 md:p-30 text-center cursor-pointer hover:border-dashed transition mt-8 sm:mt-16">
-    <div class="mx-auto w-16 h-16 sm:w-20 sm:h-20 md:w-26 md:h-26 bg-red-100 rounded-full flex items-center justify-center animate-bounce">
+    <div x-show="!selectedFile" @click="$refs.fileInput.click()" class="max-w-xs sm:max-w-4xl mx-auto bg-white border-2 border-solid border-black-300 rounded-2xl shadow-sm px-4 py-6 sm:p-16 md:p-30 text-center cursor-pointer hover:border-dashed active:border-dashed transition mt-8 sm:mt-16 traking-tight">
+    <div class="mx-auto w-10 h-10 sm:w-20 sm:h-20 md:w-26 md:h-26 bg-red-100 rounded-full flex items-center justify-center animate-bounce">
         <span class="text-red-500 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-full h-full">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75v6.75m0 0-3-3m3 3 3-3m-8.25 6a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
