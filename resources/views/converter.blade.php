@@ -39,7 +39,6 @@
 
     <hr class="mt-0 mb-8 border-t border-slate-200/60 max-w-full mx-auto px-6" />
 
-    
     <div class="text-center mb-10">
         <h2 class="text-7xl font-bold text-black italic">Convert your files.</h2>
         <h3 class="text-5xl font-bold text-gray-400 pt-9 italic">No ads. No fuss.</h3>
@@ -74,41 +73,55 @@
             <button @click="selectedFile = null" class="text-gray-400 hover:text-gray-600">✕</button>
         </div>
 
-        <div class="grid grid-cols-2 gap-4 mt-4">
-            <div>
-                <label class="text-sm text-gray-500">Detected type</label>
-                <div class="mt-1 bg-gray-100 rounded-lg px-4 py-2 text-gray-800" x-text="conversionType"></div>
+      <template x-if="status === 'idle'">
+        <div>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+                <div>
+                    <label class="text-sm text-gray-500">Detected type</label>
+                    <div class="mt-1 bg-gray-100 rounded-lg px-4 py-2 text-gray-800" x-text="conversionType"></div>
+                </div>
+                <div>
+                    <label class="text-sm text-gray-500">Convert to</label>
+                    <select x-model="targetFormat" class="mt-1 w-full bg-gray-100 rounded-lg px-4 py-2 text-gray-800">
+                        <option value="">Select</option>
+                        <template x-for="format in availableFormats" :key="format">
+                            <option :value="format" x-text="'.' + format"></option>
+                        </template>
+                    </select>
+                </div>
             </div>
-            <div>
-                <label class="text-sm text-gray-500">Convert to</label>
-                <select x-model="targetFormat" class="mt-1 w-full bg-gray-100 rounded-lg px-4 py-2 text-gray-800">
-                    <option value="">Select</option>
-                    <template x-for="format in availableFormats" :key="format">
-                        <option :value="format" x-text="'.' + format"></option>
-                    </template>
-                </select>
+            <button @click="submitConversion()" x-show="targetFormat" class="w-full mt-6 bg-red-600 text-white font-semibold py-3 rounded-full hover:bg-red-700 transition">
+                Convert
+            </button>
+        </div>
+    </template>
+        <div x-show="status === 'processing'" class="mt-6">
+            <p class="text-sm text-gray-500 mb-2">Converting your file...</p>
+            <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                <div class="bg-red-600 h-2 rounded-full animate-pulse w-full"></div>
             </div>
         </div>
 
-        <button 
-            @click="submitConversion()" 
-            x-show="targetFormat"
-            class="w-full mt-6 bg-red-600 text-white font-semibold py-3 rounded-full hover:bg-red-700 transition"
-        >
-            Convert
-        </button>
+        <div x-show="status === 'completed'" class="mt-6 text-center">
+            <p class="text-green-600 font-semibold mb-3">✓ Conversion complete!</p>
+            <p class="text-lg text-gray-500 mb-3">
+                 <span x-text="sourceFormat"></span> → <span class="font-semibold" x-text="targetFormat"></span>
+            </p>
+            <button @click="downloadFile()" class="w-full bg-red-600 text-white font-semibold py-3 rounded-full hover:bg-red-700 transition">
+                Download
+            </button>
+        </div>
 
+        <div x-show="status === 'failed'" class="mt-6 text-center">
+            <p class="text-red-600 font-semibold" x-text="errorMessage"></p>
+        </div>
     </div>
-                <button x-show="status === 'completed'" @click="downloadFile()">Download</button>
-                <p x-show="status === 'failed'" x-text="errorMessage"></p>
-            <p x-text="status"></p>
-</div>
 
     <script>
         function converterApp(){
             return{
-                status: 'idle',
                 selectedFile: null,
+                status: 'idle',
                 sourceFormat: null,
                 targetFormat: '',
                 availableFormats: [],
@@ -124,6 +137,7 @@
                     this.selectedFile = file;
                     this.sourceFormat = file.name.split('.').pop().toLowerCase();
                     this.targetFormat = ''
+                    this.status = 'idle';
 
                     await this.loadAvailableFormats();
 
@@ -184,7 +198,7 @@
                     }
 
                     this.conversionId = data.id ?? data.media_id;
-                    this.status = 'Processing';
+                    this.status = 'processing';
                     this.startPolling();
                 
                 },
@@ -209,7 +223,7 @@
 
                             if(data.status == 'failed'){
                                 clearInterval(this.pollInterval);
-                                this.status = 'Failed';
+                                this.status = 'failed';
                                 this.errorMessage = data.error_message ?? 'Conversion Failed';
                             }
                         }
