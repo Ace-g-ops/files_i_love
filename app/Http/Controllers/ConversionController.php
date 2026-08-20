@@ -44,6 +44,7 @@ class ConversionController extends Controller
             'target_format' => $targetFormat,
             'status' => 'processing',
             'converted_path' => null,
+            'session_id' => session()->getId(),
         ]);
 
         // Dispatch the appropriate job based on the category

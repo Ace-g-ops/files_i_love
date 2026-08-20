@@ -44,6 +44,7 @@ class MediaController extends Controller
             'target_format' => $targetFormat,
             'status' => 'processing', // Set initial status to 'pending' or 'processing' based on your logic
             'converted_path' => null, // Initially, there is no converted path
+            'session_id' => session()->getId(),
         ]);
 
         //dispatch the appropriate job based on the category

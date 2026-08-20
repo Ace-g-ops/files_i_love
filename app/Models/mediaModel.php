@@ -14,6 +14,7 @@ class mediaModel extends Model
         'source_format',
         'target_format',
         'status',
-        'error_message',    
+        'error_message', 
+        'session_id'   
     ];
 }

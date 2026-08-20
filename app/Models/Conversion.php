@@ -14,5 +14,6 @@ class Conversion extends Model
         'target_format',
         'status',
         'error_message',
+        'session_id'
     ];
 }
