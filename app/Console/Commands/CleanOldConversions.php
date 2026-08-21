@@ -29,11 +29,12 @@ class CleanOldConversions extends Command
      */
     public function handle()
     {
+        // Calculate the cutoff time (24 hours ago)
         $cutoff = now()->subHours(24);
-
+        
         foreach([Conversion::class, MediaModel::class] as $model){
                 $oldRecords = $model::where('created_at', '<', $cutoff)->get();
-
+            // Loop through the old records and delete them along with their associated files
             foreach($oldRecords as $record){
                  $realStoredPath = Storage::disk('local')->path($record->stored_path);
 
