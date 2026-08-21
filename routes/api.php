@@ -34,4 +34,6 @@ Route::get('/formats', function(){
     return response()->json(config('conversions'));
 });
 
+//USER CONVERSIONS ROUTE
+Route::get('/user/conversions', [App\Http\Controllers\ConversionController::class, 'userConversions']);
 

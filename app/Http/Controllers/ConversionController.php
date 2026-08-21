@@ -88,4 +88,15 @@ class ConversionController extends Controller
         ]);
     }
 
+     public function userConversions(Request $request)
+        {
+            $conversions = Conversion::where('session_id', session()->getId())
+
+            ->latest()
+            ->take(10)
+            ->get();
+
+            return response()->json($conversions);
+        }
+
 }
