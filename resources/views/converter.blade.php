@@ -120,7 +120,7 @@
     <div x-show="status === 'processing'" class="mt-6">
         <p class="text-sm text-gray-500 mb-2">Converting your file...</p>
         <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-            <div class="bg-red-600 h-2 rounded-full animate-pulse w-full"></div>
+            <div class="bg-red-600 h-2 rounded-full animate-pulse    w-full"></div>
         </div>
     </div>
 
