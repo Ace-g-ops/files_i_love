@@ -46,7 +46,7 @@
     </div>
 
     <div class="text-center mb-6 px-4">
-        <h2 class="text-2xl sm:text-5xl md:text-7xl font-bold text-black italic">Convert your files.</h2>
+        <h2 class="text-2xl sm:text-5xl md:text-7xl font-bold text-black italic">Convert your files from one format to another.</h2>
         <h3 class="text-lg sm:text-3xl md:text-5xl font-bold text-gray-400 pt-1 sm:pt-6 md:pt-9 italic">No ads. No watermarks troubles.</h3>
     </div>
 
