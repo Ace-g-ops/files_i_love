@@ -1,4 +1,3 @@
-cat > docker/entrypoint.sh << 'EOF'
 #!/usr/bin/env bash
 set -e
 
@@ -16,5 +15,3 @@ php artisan migrate --force
 
 php-fpm -D
 nginx -g "daemon off;"
-EOF
-chmod +x docker/entrypoint.sh
