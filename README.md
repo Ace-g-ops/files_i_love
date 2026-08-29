@@ -234,6 +234,7 @@ We welcome contributions to this project. Please ensure that your pull requests 
 ## Author Info
 
 *   GitHub: [Ace-g-ops](https://github.com/Ace-g-ops)
+*   Twitter/X: [Ace_theSage](https://x.com/Ace_theSage)
 
 ---
 
